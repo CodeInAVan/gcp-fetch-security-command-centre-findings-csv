@@ -65,17 +65,18 @@ The basic set of attributes that is extracted from the security hub findings can
 
 ```python
 class Finding(BaseModel):
-    environment: str = ''
     account_id: str = ''
     created_at: str = ''
     updated_at: str = ''
     compliance_status: str = ''
-    title: str = ''
+    category: str = ''
     description: str = ''
     recommendation_text: str = ''
-    recommendation_url: str = ''
-    workflow_state: str = ''
-    workflow_status: str = ''
     record_state: str = ''
     severity_label: str = ''
+    resource_type: str = ''
+    resource_id: str = ''
+    resource_details: str = ''
+    canonicalName: str = ''
+    findingClass: str = ''
 ```
