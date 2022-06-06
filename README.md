@@ -52,8 +52,8 @@ filters:
 
 ```
 
-## Fetch the Security Hub Findings
-Run the following command to fetch the security hub findings
+## Fetch the Security Command Centre Findings
+Run the following command to fetch the security findings
 ```bash
 $ python3 gcp_fetch_sec_findings.py
 ```
