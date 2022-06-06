@@ -2,7 +2,7 @@
 
 Small script (copy of https://github.com/dominikjaeckle/aws-fetch-security-hub-findings ) to fetch gcp security command centre findings based on defined account_ids and filters. The script reads a configuration file and fetches the security findings based on pre-defined account_ids and filters, which are to be defined in the settings_gcp.yaml file. 
 
-Requires gcloud CLI and activated login or service account (download the key file from teh gcpconsole, e.g. as "gcpcreds.json" and reference in the cli command below)
+Requires gcloud CLI and activated login or service account (download the key file from the gcpconsole, e.g. as "gcpcreds.json" and reference in the cli command below)
 
 ```bash
 For example
