@@ -29,7 +29,6 @@ def fetch_findings(environment: str, filterstr: str, sortcriteria: str) -> List[
 
     os.environ['GCP_ACCOUNT'] = environment
     os.environ['GCP_FILTER'] = filterstr
-    #print(filterstr)
 
     cmdstring = 'gcloud scc findings list projects/$GCP_ACCOUNT --filter=\"$GCP_FILTER\"'
     #print(cmdstring)

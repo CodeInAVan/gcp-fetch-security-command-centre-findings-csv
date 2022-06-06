@@ -2,6 +2,27 @@
 
 Small script (copy of https://github.com/dominikjaeckle/aws-fetch-security-hub-findings ) to fetch gcp security command centre findings based on defined account_ids and filters. The script reads a configuration file and fetches the security findings based on pre-defined account_ids and filters, which are to be defined in the settings_gcp.yaml file. 
 
+Requires gcloud CLI and activated login or service account (download the key file from teh gcpconsole, e.g. as "gcpcreds.json" and reference in the cli command below)
+
+```bash
+For example
+
+Please run:
+  $ gcloud auth login
+to obtain new credentials.
+
+For service account, please activate it first:
+  $ gcloud auth activate-service-account ACCOUNT --key-file=gcpcreds.json
+```
+
+
+Script is running this command and then parsing the json outpout to html and csv.
+```bash
+GCP_ACCOUNT=my-account-id
+GCP_FILTER="state=\"ACTIVE\""
+gcloud scc findings list projects/$GCP_ACCOUNT --filter=$GCP_FILTER
+```
+
 The script expects gcp account credentials in a file gcpcreds.json (see example).
 
 Modified to support a csv output and adapted for gcp gcloud from https://github.com/dominikjaeckle orginal aws script.
@@ -30,7 +51,6 @@ filters:
     comparison: '='
 
 ```
-Create a **gcpcreds.json**, paste in your service account .json file.
 
 ## Fetch the Security Hub Findings
 Run the following command to fetch the security hub findings
